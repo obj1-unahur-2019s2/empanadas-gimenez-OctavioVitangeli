@@ -21,9 +21,18 @@ test "gimenez"{
 	gimenez.pagarA(galvan)
 	assert.equals(278440,gimenez.dinero())
 	//balgorria vende 4 empanadas
-	//poner el sueldode galvan en 20000
+	//poner el sueldo de galvan en 20000
 	//que gimenez pague a los 2
 	//  verificar cuanto  dinero le queda
 	// gimenez //
+	
+} 
+test "galvanDeudas"{
+	galvan.gastar(4000)
+	galvan.gastar(8000)
+	galvan.cobrarSueldo()
+	galvan.gastar(25000)
+	galvan.cobrarSueldo()
+	assert.equals(-7000,galvan.totalDinero())
 	
 }
